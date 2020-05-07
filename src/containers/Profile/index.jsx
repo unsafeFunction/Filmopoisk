@@ -53,8 +53,9 @@ const Profile = React.memo(() => {
         <span>{user.fullName}</span>
       </div>
       <div className={styles.userFilms}>
-        {user.films.map((film) => (
+        {user.films &&user.films.map((film) => (
           <FilmRating
+            key={film.id}
             onChange={(rating) => onRatingChange(rating, film.userFilm.id)}
             film={film}
           />

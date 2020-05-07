@@ -61,8 +61,8 @@ const Favourite = () => {
         {films &&
           Object.values(films).map((film) => {
             return (
-              <Link to={`/film/${film.id}`}>
-                <FilmItem key={film.id} film={film} />
+              <Link key={film.id} to={`/film/${film.id}`}>
+                <FilmItem film={film} />
               </Link>
             );
           })}

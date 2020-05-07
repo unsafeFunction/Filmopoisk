@@ -50,7 +50,7 @@ const Film = () => {
       <div className={styles.film}>
         <FilmItem film={normalizedFilm || {}} />
         <ReactStars
-          size="24"
+          size={24}
           count={5}
           onChange={onRatingChange}
           color2="#ffd700"

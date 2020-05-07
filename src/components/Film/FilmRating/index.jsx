@@ -20,7 +20,7 @@ const FilmRating = ({ film, onChange }) => {
       <ReactStars
         onChange={onChange}
         value={film.userFilm.rating}
-        size="24"
+        size={24}
         count={5}
         color2="#ffd700"
         half={false}

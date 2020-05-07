@@ -34,8 +34,7 @@ SideMenu.displayName = SideMenu;
 SideMenu.propTypes = {
   genres: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      id: PropTypes.string.isRequired,
+
     })
   ),
 };

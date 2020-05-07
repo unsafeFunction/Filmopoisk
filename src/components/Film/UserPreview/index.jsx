@@ -16,7 +16,7 @@ const UserPreview = ({ user, userFilms }) => {
       <ReactStars
         value={get(userFilms[user.userFilm], "rating", 0)}
         edit={false}
-        size="24"
+        size={24}
         count={5}
         color2="#ffd700"
         half={false}
@@ -30,7 +30,7 @@ UserPreview.propTypes = {
     fullName: PropTypes.string,
   }),
   userFilms: PropTypes.shape({
-    rating: PropTypes.number.isRequired,
+    rating: PropTypes.number,
   }),
 };
 
