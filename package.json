@@ -35,7 +35,6 @@
   },
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.9.6",
-    "@beisen/paging": "^0.1.72",
     "@svgr/webpack": "^5.4.0",
     "axios": "^0.19.2",
     "babel-eslint": "^8.2.6",
