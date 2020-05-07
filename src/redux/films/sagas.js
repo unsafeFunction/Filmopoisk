@@ -2,7 +2,13 @@ import { all, takeEvery, put, call } from "redux-saga/effects";
 import { normalize } from "normalizr";
 import { singleFilms } from "redux/schemes";
 import userActions from "redux/users/actions";
-import { loadFilms, getFilm, patchFilmRating, createFilmRating } from "./api";
+import {
+  loadFilms,
+  getFilm,
+  patchFilmRating,
+  createFilmRating,
+  loadRecommendations,
+} from "./api";
 import actions from "./actions";
 
 export function* callLoadFilms({ payload }) {
@@ -14,6 +20,21 @@ export function* callLoadFilms({ payload }) {
       payload: {
         data: response.data.rows,
         total: response.data.count,
+      },
+    });
+  } catch (error) {
+    return error;
+  }
+}
+
+export function* callLoadRecommendations({ payload }) {
+  try {
+    const response = yield call(loadRecommendations, payload);
+
+    yield put({
+      type: actions.LOAD_RECOMMENDATIONS_SUCCESS,
+      payload: {
+        data: response.data,
       },
     });
   } catch (error) {
@@ -76,7 +97,7 @@ export function* callCreateFilmRating({ payload }) {
       },
     });
   } catch (error) {
-    console.log(error);
+    return error;
   }
 }
 
@@ -86,5 +107,6 @@ export default function* rootSaga() {
     takeEvery(actions.GET_FILM_REQUEST, callGetFilm),
     takeEvery(actions.UPDATE_FILM_RATING_REQUEST, callPatchFilmRating),
     takeEvery(actions.CREATE_FILM_RATING_REQUEST, callCreateFilmRating),
+    takeEvery(actions.LOAD_RECOMMENDATIONS_REQUEST, callLoadRecommendations),
   ]);
 }

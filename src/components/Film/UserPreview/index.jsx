@@ -7,7 +7,6 @@ import get from "lodash.get";
 import styles from "./styles.module.css";
 
 const UserPreview = ({ user, userFilms }) => {
-  console.log(user, userFilms);
   return (
     <div className={styles.userPreview}>
       <div className={styles.userLogo}>

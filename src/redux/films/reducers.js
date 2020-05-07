@@ -6,6 +6,7 @@ import actions from "./actions";
 
 const initialState = {
   items: [],
+  recommendations: [],
   error: null,
   isLoading: false,
   total: 0,
@@ -21,8 +22,16 @@ const filmsReducer = (state = initialState, action) => {
     }
     case actions.LOAD_FILMS_SUCCESS: {
       return {
+        ...state,
         items: normalize(action.payload.data, [films]).entities,
         total: action.payload.total,
+        isLoading: true,
+      };
+    }
+    case actions.LOAD_RECOMMENDATIONS_SUCCESS: {
+      return {
+        ...state,
+        recommendations: action.payload.data,
         isLoading: true,
       };
     }
@@ -73,6 +82,7 @@ export default combineReducers({
       }
       case actions.SET_FILM_QUERY_DATA: {
         return {
+          ...state,
           searchString: action.payload.value,
         };
       }

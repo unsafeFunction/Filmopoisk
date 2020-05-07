@@ -11,10 +11,18 @@ import styles from "./styles.module.css";
 const MainLayout = ({ children }) => {
   const dispatch = useDispatch();
   const genres = useSelector((state) => state.genres.items);
+  const recommendations = useSelector(
+    (state) => state.films.all.recommendations
+  );
 
   useEffect(() => {
     dispatch({
       type: actions.LOAD_GENRES_REQUEST,
+      payload: {},
+    });
+
+    dispatch({
+      type: filmActions.LOAD_RECOMMENDATIONS_REQUEST,
       payload: {},
     });
   }, []);
@@ -45,7 +53,7 @@ const MainLayout = ({ children }) => {
       <div className={styles.contentWrap}>
         <Header onChange={onChange} />
         <div className={styles.content}>{children}</div>
-        <Footer />
+        <Footer recommendations={recommendations} />
       </div>
     </div>
   );

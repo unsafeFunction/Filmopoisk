@@ -7,7 +7,6 @@ const Pagination = ({ onClick, pages, activePage }) => {
   return (
     <div className={styles.buttons}>
       {pages.map((page) => {
-        console.log(page - 1, activePage);
         return (
           <button
             className={clsx({

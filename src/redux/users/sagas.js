@@ -13,7 +13,7 @@ export function* callGetUser({ payload }) {
       },
     });
   } catch (error) {
-    console.log(error);
+    return error;
   }
 }
 

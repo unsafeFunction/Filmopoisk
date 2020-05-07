@@ -17,18 +17,14 @@ const Film = () => {
   const userFilms = useSelector((state) => state.userFilms.all);
   const params = useParams();
 
-  const useFetching = () => {
-    useEffect(() => {
-      dispatch({
-        type: actions.GET_FILM_REQUEST,
-        payload: {
-          id: params.id,
-        },
-      });
-    }, []);
-  };
-
-  useFetching();
+  useEffect(() => {
+    dispatch({
+      type: actions.GET_FILM_REQUEST,
+      payload: {
+        id: params.id,
+      },
+    });
+  }, [params]);
 
   const onRatingChange = useCallback(
     (rating) => {

@@ -12,6 +12,16 @@ export const loadFilms = async (query) => {
   }
 };
 
+export const loadRecommendations = async () => {
+  try {
+    const films = await axiosClient.get("/films/recommendations");
+
+    return films;
+  } catch (error) {
+    return error;
+  }
+};
+
 export const getFilm = async (id) => {
   try {
     const films = await axiosClient.get(`/films/${id}`);
