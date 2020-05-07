@@ -1,4 +1,4 @@
-import React, { StrictMode } from "react";
+import React from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import ReactDOM from "react-dom";
@@ -8,12 +8,10 @@ import App from "./src/containers/App";
 import "./style.css";
 
 ReactDOM.hydrate(
-  <StrictMode>
     <Provider store={store}>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </Provider>
-  </StrictMode>,
+    </Provider>,
   document.getElementById("root")
 );
