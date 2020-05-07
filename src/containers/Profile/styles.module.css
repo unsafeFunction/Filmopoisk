@@ -1,0 +1,15 @@
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.user > svg {
+    margin-bottom: 20px;
+}
+
+.userFilms {
+    display: flex;
+    flex-wrap: wrap;
+}

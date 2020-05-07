@@ -1,0 +1,19 @@
+.filmItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 20px;
+    margin-bottom: 20px;
+};
+
+.filmPoster {
+    width: 30px;
+}
+
+.filmItem > img {
+   display: block;
+   width: 150px;
+   height: 150px;
+}

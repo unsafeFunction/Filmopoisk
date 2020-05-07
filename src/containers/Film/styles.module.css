@@ -1,0 +1,15 @@
+.filmWrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.film {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.userStars {
+    margin-top: 20px;
+}

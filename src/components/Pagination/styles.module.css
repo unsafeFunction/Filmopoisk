@@ -1,0 +1,18 @@
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons > button {
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+.activePage {
+    background-color: rgb(109, 111, 242);
+    color: #ffffff;
+}

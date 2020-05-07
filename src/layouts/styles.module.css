@@ -1,0 +1,12 @@
+.rootContent {
+    display: flex;
+}
+
+.contentWrap {
+    width: 100vw;
+}
+
+.content {
+    min-height: calc(100vh - 260px);
+    padding: 20px 40px;
+}

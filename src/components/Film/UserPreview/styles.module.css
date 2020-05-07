@@ -1,0 +1,19 @@
+.userPreview {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.userPreview > .userLogo {
+    max-width: 130px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.userPreview > svg {
+    margin-right: 10px;
+}

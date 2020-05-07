@@ -1,0 +1,7 @@
+const actions = {
+  LOAD_GENRES_REQUEST: "films/LOAD_GENRES_REQUEST",
+  LOAD_GENRES_SUCCESS: "films/LOAD_GENRES_SUCCESS",
+  LOAD_GENRES_FAILURE: "films/LOAD_GENRES_FAILURE",
+};
+
+export default actions;

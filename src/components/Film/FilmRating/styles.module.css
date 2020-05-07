@@ -1,0 +1,13 @@
+.filmDescription {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.filmDescription > img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}

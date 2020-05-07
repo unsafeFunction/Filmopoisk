@@ -1,0 +1,57 @@
+{
+    "extends": ["airbnb", "plugin:prettier/recommended"],
+    "parser": "babel-eslint",
+    "plugins": ["react", "prettier"],
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "sourceType": "module"
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "paths": ["src"]
+        }
+      }
+    },
+    "rules": {
+      "linebreak-style": 0,
+      "max-len": [
+        2,
+        120,
+        2,
+        {
+          "ignoreUrls": true,
+          "ignoreComments": true
+        }
+      ],
+      "no-multiple-empty-lines": [
+        "error",
+        {
+          "max": 3
+        }
+      ],
+      "indent": ["error", 2, { "SwitchCase": 1 }],
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "no-const-assign": "warn",
+      "no-this-before-super": "warn",
+      "no-undef": "warn",
+      "no-unreachable": "warn",
+      "no-unused-vars": "warn",
+      "constructor-super": "warn",
+      "valid-typeof": "warn",
+      "no-shadow": 0,
+      "prettier/prettier": "error",
+      "no-case-declarations": "off",
+      "no-param-reassign": "off",
+      "react/forbid-prop-types": "warn"
+    }
+  }

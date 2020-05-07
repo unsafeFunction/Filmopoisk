@@ -1,0 +1,14 @@
+.sideMenu {
+    padding: 15px 55px;
+    font-weight: 500;
+    background-color: #fff7f7;
+    color: #2C3E50;
+}
+
+.title {
+    margin-bottom: 55px;
+}
+
+.genre {
+    cursor: pointer;
+}

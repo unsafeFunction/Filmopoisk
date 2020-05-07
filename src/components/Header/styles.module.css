@@ -1,0 +1,18 @@
+.header {
+    width: 100%;
+    padding: 25px 15px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.searchInput {
+    width: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #2C3E50;
+    outline: none;
+    font-size: 15px;
+}
