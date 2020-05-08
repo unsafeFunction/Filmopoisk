@@ -5,7 +5,7 @@ import actions from "redux/films/actions";
 import { FilmItem, Pagination } from "components";
 import Loader from "react-loader-spinner";
 import get from "lodash.get";
-import pageButtonsArray from "hooks/usePagination";
+import usePagination from "hooks/usePagination";
 import styles from "./styles.module.css";
 
 const Favourite = () => {
@@ -29,7 +29,7 @@ const Favourite = () => {
     [dispatch]
   );
 
-  const [pages, ITEM_PEAR_PAGE] = pageButtonsArray(filmsData.total);
+  const [pages, ITEM_PEAR_PAGE] = usePagination(filmsData.total);
 
   useEffect(() => {
     dispatch({
