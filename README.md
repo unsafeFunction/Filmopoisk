@@ -1,2 +1,2 @@
-# Filmopoisk
-Test task
+## Filmopoisk
+Front-End test app for InSoft 
